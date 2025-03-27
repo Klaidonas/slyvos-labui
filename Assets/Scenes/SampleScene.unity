@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 97500006}
   - component: {fileID: 97500005}
   - component: {fileID: 97500011}
+  - component: {fileID: 97500012}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -426,6 +427,27 @@ MonoBehaviour:
   ladderBottom: {fileID: 1196418896}
   agent: {fileID: 97500006}
   animator: {fileID: 0}
+--- !u!135 &97500012
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97500003}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &154374234 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4410675035139110433, guid: 09d870b9c6c78ab42b89e0e94120bc08, type: 3}
