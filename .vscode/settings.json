@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Slyvos Labui.sln"
+    "dotnet.defaultSolution": "slyvos-labui.sln"
 }

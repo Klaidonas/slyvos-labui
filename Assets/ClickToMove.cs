@@ -5,6 +5,7 @@ public class ClickToMove : MonoBehaviour
 {
     private NavMeshAgent agent;
     private int groundLayerMask; // Layer mask for the "Ground" layer
+    private SphereCollider soundRadiusCollider; // Collider for sound radius
 
     private float defaultSpeed = 3.5f; // Default movement speed
     private float runSpeed = 7.0f; // Running speed (2x default speed)
@@ -33,6 +34,18 @@ public class ClickToMove : MonoBehaviour
 
         // Set the default speed
         agent.speed = defaultSpeed;
+
+        // Get the SphereCollider component
+        soundRadiusCollider = GetComponent<SphereCollider>();
+        if (soundRadiusCollider == null)
+        {
+            Debug.LogError("❌ SphereCollider component is missing on player! Please add a SphereCollider set as trigger.");
+        }
+        else
+        {
+            soundRadiusCollider.isTrigger = true;
+            soundRadiusCollider.enabled = false; // Initially disabled
+        }
     }
 
     void Update()
@@ -80,6 +93,12 @@ public class ClickToMove : MonoBehaviour
             {
                 Debug.Log("⚠️ No valid surface clicked.");
             }
+        }
+
+        // Enable sound radius when sprinting and moving
+        if (soundRadiusCollider != null)
+        {
+            soundRadiusCollider.enabled = (agent.speed == runSpeed && agent.velocity.magnitude > 0);
         }
     }
 }
