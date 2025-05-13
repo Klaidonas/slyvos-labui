@@ -164,7 +164,7 @@ public class AIController : MonoBehaviour
             Debug.Log("AIController: Lost sight of player. Returning to roaming.");
         }
     }
-
+    
     void DetectPlayer()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);

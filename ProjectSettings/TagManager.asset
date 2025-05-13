@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stairs
   - Attic
+  - Basement
   layers:
   - Default
   - TransparentFX

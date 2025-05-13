@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3177699}
   m_Layer: 0
   m_Name: Basement_Room2_Waypoint (1)
-  m_TagString: Untagged
+  m_TagString: Basement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 459341306}
   m_Layer: 0
   m_Name: Basement_Room1_Waypoint
-  m_TagString: Untagged
+  m_TagString: Basement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5107,7 +5107,7 @@ GameObject:
   - component: {fileID: 1417392459}
   m_Layer: 0
   m_Name: Basement_Stairs_Waypoint
-  m_TagString: Untagged
+  m_TagString: Basement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5584,6 +5584,8 @@ GameObject:
   - component: {fileID: 1513648656}
   - component: {fileID: 1513648655}
   - component: {fileID: 1513648654}
+  - component: {fileID: 1513648662}
+  - component: {fileID: 1513648661}
   m_Layer: 0
   m_Name: AI Enemy
   m_TagString: Untagged
@@ -5752,6 +5754,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1513648661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513648653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Graph: {fileID: -5793690053676518573, guid: c9dfccb4baed7a049a1fbbef7f850420, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 6895385168267706725
+  - rid: 6895385168267706762
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 6895385168267706725
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 1513648653}
+    - rid: 6895385168267706762
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5564537349663516472
+          m_Value1: 6315209582880024314
+        Name: PatrolPoints
+        m_Value:
+        - {fileID: 20548835}
+        - {fileID: 321928816}
+        - {fileID: 14546390}
+        - {fileID: 893246717}
+        - {fileID: 1011211230}
+        - {fileID: 542532888}
+        - {fileID: 587385590}
+        - {fileID: 1417392458}
+        - {fileID: 459341305}
+        - {fileID: 3177698}
+--- !u!114 &1513648662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513648653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e67df88f5a3c2049bed7fa4866858e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 532639054}
+  patrolPoints:
+  - {fileID: 20548836}
+  - {fileID: 321928817}
+  - {fileID: 14546391}
+  - {fileID: 893246718}
+  - {fileID: 1011211231}
+  - {fileID: 542532889}
+  - {fileID: 587385591}
+  - {fileID: 1417392459}
+  - {fileID: 459341306}
+  - {fileID: 3177699}
+  isAlerted: 0
 --- !u!4 &1548328124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2625952173410231607, guid: b7188c4920b915d41a1c3a5cdf968f12, type: 3}
@@ -6733,7 +6807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936760781}
   m_Layer: 0
-  m_Name: Waypoints
+  m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
