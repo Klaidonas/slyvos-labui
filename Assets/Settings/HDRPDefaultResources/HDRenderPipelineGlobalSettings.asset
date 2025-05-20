@@ -281,7 +281,7 @@ MonoBehaviour:
           sssQualityLevel: 0
           sssCustomSampleBudget: 20
           sssCustomDownsampleSteps: 0
-          msaaMode: 1
+          msaaMode: 8
           materialQuality: 0
         m_CustomOrBakedReflection:
           bitDatas:
