@@ -134,20 +134,7 @@ public class ClickToMove : MonoBehaviour
             agent.SetDestination(targetPosition);
             Debug.DrawLine(targetPosition, targetPosition + Vector3.up * 2f, Color.green, 2f);
 
-            // Enable movement and set the agent back to active
-            agent.isStopped = false;
-        }
     }
 
-    private void CheckPlankCrossing()
-    {
-        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out RaycastHit hit, 1f, groundLayerMask))
-        {
-            Plank plank = hit.collider.GetComponentInParent<Plank>();
-            if (plank != null)
-            {
-                plank.CrossPlank();
-            }
-        }
-    }
 }
+

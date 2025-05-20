@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stairs
   - Attic
+  - Basement
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Attic
   - Trees
   - IgnoreNavMeshDec
-  - 
-  - 
+  - PostProcessing
+  - globalPostProcessVolume
   - 
   - 
   - 
