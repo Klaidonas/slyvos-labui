@@ -134,6 +134,7 @@ public class ClickToMove : MonoBehaviour
             agent.SetDestination(targetPosition);
             Debug.DrawLine(targetPosition, targetPosition + Vector3.up * 2f, Color.green, 2f);
 
+<<<<<<< Updated upstream
             // Enable movement and set the agent back to active
             agent.isStopped = false;
         }
@@ -151,3 +152,9 @@ public class ClickToMove : MonoBehaviour
         }
     }
 }
+=======
+    }
+
+}
+
+>>>>>>> Stashed changes
